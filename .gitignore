@@ -1,7 +1,7 @@
 # .gitignore for Next.js
 
 # Dependencies
-/node_modules/
+node_modules
 /.pnp
 .pnp.js
 
@@ -10,7 +10,7 @@
 
 # Production
 /build
-/.next/
+.next
 /out/
 
 # Debug
