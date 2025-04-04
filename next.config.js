@@ -10,7 +10,9 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: [],
+        hostname: 'example.com', // ✅ Đúng: hostname là chuỗi
+        port: '', // (Tùy chọn)
+        pathname: '/**', // (Tùy chọn)
       },
     ],
   },
