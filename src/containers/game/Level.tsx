@@ -41,9 +41,9 @@ export default class Level extends React.Component<ILevelProps, ILevelState> {
 
   cardsFinishedHandler = (cards: string[]) => {
     const nextState = produce(this.state, (draftState) => {
-      for (const c of cards) {
-        draftState.remainingSounds.cRemove(c);
-      }
+      // for (const c of cards) {
+      //   draftState.remainingSounds.cRemove(c);
+      // }
     });
     if (nextState.remainingSounds.length === 0) {
       this.props.onCompletedHandler();

@@ -1,5 +1,6 @@
 import { Dayjs } from 'dayjs';
-import { IOrderSupplier } from './order';
+
+// import { IOrderSupplier } from './order';
 
 export interface GeneralOption {
   id: number;
@@ -139,7 +140,7 @@ export interface IMinimumOrderAmountErrors {
   data: IMinimumOrderAmountErrorsData[];
 }
 export interface IMinimumOrderAmountErrorsData {
-  vendor: IOrderSupplier;
+  vendor: any;
   minimum_amount: number;
 }
 
@@ -176,7 +177,7 @@ export interface IInventoryOptionErrors {
 }
 
 export interface IMaximumUnpaidAmountErrorsData {
-  vendor: IOrderSupplier;
+  vendor: any;
   unpaid_amount_limit: number;
   current_unpaid_amount: number;
 }

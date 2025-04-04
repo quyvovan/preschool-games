@@ -6,7 +6,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import { useIsMounted } from '@/hooks';
 import defaultImage from '../../../public/images/image.png';
 
 type ImageProps = ClassAttributes<HTMLImageElement> &
@@ -28,7 +27,7 @@ const ImageComponent = ({
     setImageSrc(src || '');
   }, [src]);
 
-  const isMounted = useIsMounted();
+  const isMounted = true;
 
   const onLoadImageError = useCallback(() => {
     if (defaultSrc && isMounted) {

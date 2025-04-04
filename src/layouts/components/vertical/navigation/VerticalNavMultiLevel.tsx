@@ -20,7 +20,7 @@ import { useRouter } from 'next/router';
 import { ElementType, ReactNode, useState } from 'react';
 import NextLink from '@/components/shared-components/NextLink';
 import themeConfig from '@/configs/themeConfig';
-import { getBuyUrl } from '@/utils';
+// import { getBuyUrl } from '@/utils';
 import UserIcon from '../../UserIcon';
 
 const MAX_QUANTITY_TO_SHOW = 99;
@@ -104,9 +104,9 @@ const VerticalNavMultiLevel = ({
 
   const getActiveNavLinkColor = (() => {
     let color = theme.palette.primary.main;
-    if (router.pathname.includes(getBuyUrl())) {
-      color = theme.palette.error.main;
-    }
+    // if (router.pathname.includes(getBuyUrl())) {
+    //   color = theme.palette.error.main;
+    // }
     return color;
   })();
 

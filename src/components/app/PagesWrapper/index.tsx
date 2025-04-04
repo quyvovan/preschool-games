@@ -9,7 +9,7 @@ import { ModalProvider } from '@/libs/my-mui-modal-provider';
 import { AppDispatch } from '@/store/app-dispatch';
 // import { insertRouterHistory } from '@/store/slices/app';
 // import { companySelectors } from '@/store/slices/company';
-import { IBranch } from '@/types/branch';
+// import { IBranch } from '@/types/branch';
 import { getAccessToken } from '@/utils/cookies';
 import { LOCAL_STORAGE_KEY, localStorageUtil } from '@/utils/localStorage';
 import { generateLoginUrl, getRegisterUrl } from '@/utils/routing';
@@ -145,9 +145,9 @@ export const PagesWrapper = (props: IAuthPagesAppProps) => {
         return;
       }
 
-      const currentBranch = localStorageUtil.getItem<IBranch>(
-        LOCAL_STORAGE_KEY.CURRENT_BRANCH
-      );
+      // const currentBranch = localStorageUtil.getItem<IBranch>(
+      //   LOCAL_STORAGE_KEY.CURRENT_BRANCH
+      // );
 
       // if (!currentBranch) {
       //   const branchList =

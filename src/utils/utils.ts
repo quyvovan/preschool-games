@@ -1,6 +1,5 @@
-import { rxRemoveCharacter } from './regex';
-import { IProductCategory } from '@/types';
 import { NextRouter } from 'next/router';
+import { rxRemoveCharacter } from './regex';
 
 /**
  * Check for URL queries as well for matching
@@ -89,9 +88,7 @@ export const timeSlots = Array.from(new Array(24 * 2)).map(
       index % 2 === 0 ? '00' : '30'
     }`
 );
-export const convertToCategoriesWithLevel = (
-  productCategories: IProductCategory[]
-) =>
+export const convertToCategoriesWithLevel = (productCategories: any[]) =>
   productCategories.map((categoryList) => {
     // Category level 1
     const categories: string[] = [categoryList.name || ''];
