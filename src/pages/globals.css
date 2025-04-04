@@ -1,0 +1,147 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply border-0 p-2 px-6 bg-slate-100 rounded-md;
+  }
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', 'Lucida Console',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url(assets/images/wood.jpg) */
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* body, html { 
+  overflow-x: hidden; 
+  overflow-y: auto;
+} */
+
+:root {
+  --card-width: 160px;
+  --card-height: 200px;
+  --card-margin: 10px;
+}
+
+/* .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+
+  max-width: 800px;
+} */
+
+
+.scene {
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: var(--card-margin);
+  perspective: 600px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--back {
+  overflow: visible; /* Hacky fix for overflow on phones */
+  transform: rotateY(180deg);
+  background-image: url(../../public/game/paper.jpg);
+}
+
+  /* ne = no-effects*/
+.scene-ne {
+  width: var(--card-width);
+  height: var(--card-height);
+  margin: var(--card-margin);
+}
+
+.card-ne {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
+}
+.card-ne--back {
+  overflow: auto; /* Hacky fix for overflow on phones */
+  /* background-image: url(./assets/images/paper.jpg); */
+  width: 100%;
+  height: 100%;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+  width: 300px;
+  height: 300px;
+}
+
+img.star {
+  width: 100px;
+  height: 100px;
+}
+
+.stacked-card-container  {
+  margin-top: auto;
+}
+
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+.text-dark {
+  color: #343a40 !important;
+}
+.display-1, .display-2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-1 {
+  font-size: 6rem;
+}
+.display-3, .display-4 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+.display-3 {
+  font-size: 4.5rem;
+}
+.m-3 {
+  margin: 1rem !important;
+}
