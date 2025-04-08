@@ -16,9 +16,9 @@ const AppBar = styled(MuiAppBar)<AppBarProps>(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   padding: theme.spacing(0, 6),
-  backgroundColor: theme.palette.common.white,
+  backgroundColor: '#343839',
   color: theme.palette.text.primary,
-  boxShadow: '0px 4px 20px rgb(0 0 0 / 12%)',
+  // boxShadow: '0px 4px 20px rgb(0 0 0 / 12%)',
   minHeight: theme.mixins.toolbar.minHeight,
   [theme.breakpoints.down('sm')]: {
     paddingLeft: theme.spacing(4),

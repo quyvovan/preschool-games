@@ -7,11 +7,33 @@ export const useNavigationItems = () => {
   const navigationFullItems = useMemo(() => {
     return [
       {
-        title: translate('dashboard'),
+        // title: translate('dashboard'),
+        title: 'Game ghi nhớ',
         icon: DashboardOutlinedIcon as unknown as NavLink['icon'],
         showDotIcon: false,
         show: true,
-        path: '/dashboard',
+        path: '/game-card',
+      },
+      {
+        title: 'Game đố vui',
+        icon: DashboardOutlinedIcon as unknown as NavLink['icon'],
+        showDotIcon: false,
+        show: true,
+        path: '/game-quiz',
+      },
+      {
+        title: 'Game đập chuột',
+        icon: DashboardOutlinedIcon as unknown as NavLink['icon'],
+        showDotIcon: false,
+        show: true,
+        path: '/game-whack-a-mole',
+      },
+      {
+        title: 'Game Tính toán',
+        icon: DashboardOutlinedIcon as unknown as NavLink['icon'],
+        showDotIcon: false,
+        show: true,
+        path: '/game-loop-no-speech',
       },
     ];
   }, []);

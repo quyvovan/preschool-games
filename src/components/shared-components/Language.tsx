@@ -1,9 +1,9 @@
-import { useSettings } from '@/hooks/useSettings';
-import { ILocale } from '@/types';
-import { LanguageEnum } from '@/utils';
 import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useRouter } from 'next/router';
+import { useSettings } from '@/hooks/useSettings';
+import { ILocale } from '@/types';
+import { LanguageEnum } from '@/utils';
 
 const locales: ILocale[] = [
   {
@@ -17,12 +17,6 @@ const locales: ILocale[] = [
     label: 'English',
     value: LanguageEnum.en_US,
     img: '/country/en.png',
-  },
-  {
-    key: LanguageEnum.ko_KR,
-    label: '한국어',
-    value: LanguageEnum.ko_KR,
-    img: '/country/ko.png',
   },
 ];
 
@@ -66,10 +60,15 @@ const Language = (props: LanguageProps) => {
             horizontal: 'left',
           },
         }}
+        sx={{
+          '& .MuiSvgIcon-root': {
+            color: '#fff',
+          },
+        }}
       >
         {locales.map((item) => (
           <MenuItem key={item.key} value={item.key}>
-            <Box sx={{ '& > img': { mr: 2, flexShrink: 0 } }}>
+            <Box sx={{ color: '#fff', '& > img': { mr: 2, flexShrink: 0 } }}>
               <img loading="lazy" width="20" src={item.img} alt="" />
               {item.label}
             </Box>

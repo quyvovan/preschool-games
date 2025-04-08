@@ -1,17 +1,6 @@
 // ** React Imports
 // ** MUI Imports
 // ** Next Imports
-import NextLink from '@/components/shared-components/NextLink';
-// ** Configs Import
-import themeConfig from '@/configs/themeConfig';
-// ** Types
-import { Settings } from '@/context/settingsContext';
-// ** Custom Components Imports
-import UserIcon from '@/layouts/components/UserIcon';
-import { NavLink } from '@/layouts/types';
-// ** Utils
-// import { getBuyUrl } from '@/utils';
-import { handleURLQueries } from '@/utils/utils';
 import Box, { BoxProps } from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import ListItem from '@mui/material/ListItem';
@@ -23,6 +12,17 @@ import Typography from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 import { ElementType, ReactNode } from 'react';
+import NextLink from '@/components/shared-components/NextLink';
+// ** Configs Import
+import themeConfig from '@/configs/themeConfig';
+// ** Types
+import { Settings } from '@/context/settingsContext';
+// ** Custom Components Imports
+import UserIcon from '@/layouts/components/UserIcon';
+import { NavLink } from '@/layouts/types';
+// ** Utils
+// import { getBuyUrl } from '@/utils';
+import { handleURLQueries } from '@/utils/utils';
 
 interface Props {
   item: NavLink;
@@ -54,7 +54,7 @@ const MenuNavLink = styled(ListItemButton, {
   },
 
   '&.active .MuiTypography-root, &.active .MuiSvgIcon-root': {
-    color: `${theme.palette.common.white} !important`,
+    color: `#FF9800 !important`,
   },
 }));
 
@@ -82,10 +82,7 @@ const VerticalNavLink = ({ item, navVisible, toggleNavVisibility }: Props) => {
 
   const getActiveNavLinkColor = (() => {
     const color = theme.palette.primary.main;
-    // if (router.pathname.includes(getBuyUrl())) {
-    //   color = theme.palette.error.main;
-    // }
-    return color;
+    return '#607D8B';
   })();
 
   return (

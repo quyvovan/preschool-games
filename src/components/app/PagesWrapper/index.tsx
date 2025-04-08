@@ -1,9 +1,6 @@
 import { SplashScreen } from '../SplashScreen';
 import ApiError from '@/components/common/modals/api-error';
 import { useAuth } from '@/hooks/useAuth';
-// import { usePermission } from '@/hooks/usePermission';
-// import { useRoute } from '@/hooks/useRoute';
-// import { useAppDispatch, useAppSelector } from '@/hooks/useStore';
 import UserLayout from '@/layouts/UserLayout';
 import { ModalProvider } from '@/libs/my-mui-modal-provider';
 import { AppDispatch } from '@/store/app-dispatch';
@@ -181,62 +178,8 @@ export const PagesWrapper = (props: IAuthPagesAppProps) => {
       Nhóm router cần hiển thị splash screen, lấy thông tin account, nếu success sẽ đứng tại trang hiện tại
     */
     (async () => {
-      // if (currentLinkType !== LinkTypeEnum.Auth) return;
-
-      // const accessToken = getAccessToken();
+     
       hideSplashScreen();
-      // if (!accessToken) {
-      //   localStorageUtil.removeItem(LOCAL_STORAGE_KEY.BRANCHES);
-      //   localStorageUtil.removeItem(LOCAL_STORAGE_KEY.CURRENT_BRANCH);
-      //   router.push('/').then(() => hideSplashScreen());
-      //   return;
-      // }
-
-      // const currentBranch = localStorageUtil.getItem<IBranch>(
-      //   LOCAL_STORAGE_KEY.CURRENT_BRANCH
-      // );
-
-      // if (!currentBranch) {
-      // const branchList =
-      //   localStorageUtil.getItem<IAuthBranch[]>(LOCAL_STORAGE_KEY.BRANCHES) ??
-      //   [];
-
-      // if (branchList.length > 0) {
-      //   const isChooseBranchPage = currentAsPath.startsWith(chooseBranchUrl);
-
-      //   if (!isChooseBranchPage) {
-      //     router.push(chooseBranchUrl).then(() => hideSplashScreen());
-      //     return;
-      //   }
-
-      //   hideSplashScreen();
-      //   return;
-      // }
-
-      //   removeAccessToken();
-      //   router.push('/login').then(() => hideSplashScreen());
-      //   return;
-      // }
-
-      // try {
-        // const accountInfoResp = await getAccountInfo();
-        // if (accountInfoResp.success) {
-          // const isChooseBranchPage = router.asPath.startsWith(chooseBranchUrl);
-          // if (isChooseBranchPage) {
-          //   setTimeout(() => {
-          //     router
-          //       .push(route.firstDisplayPageRef.current)
-          //       .then(() => hideSplashScreen());
-          //   }, 100);
-
-          //   return;
-          // }
-
-          // hideSplashScreen();
-        // }
-      // } catch (error) {
-      //   router.push('/').then(() => hideSplashScreen());
-      // }
     })();
   }, [router.isReady]);
 

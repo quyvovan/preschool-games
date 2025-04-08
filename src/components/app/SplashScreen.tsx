@@ -1,5 +1,5 @@
-import { PUBLIC_IMAGES_URL } from '@/constants';
 import { Box, useTheme } from '@mui/material';
+import { PUBLIC_IMAGES_URL } from '@/constants';
 
 export const SplashScreen = () => {
   const theme = useTheme();
@@ -17,8 +17,8 @@ export const SplashScreen = () => {
       <Box
         sx={{
           position: 'relative',
-          width: theme.spacing(60),
-          height: theme.spacing(40),
+          width: '100px',
+          height: '100px',
           lineHeight: theme.spacing(1),
         }}
       >
@@ -34,15 +34,15 @@ export const SplashScreen = () => {
             position: 'relative',
             zIndex: 2,
             '.logo-img': {
-              width: theme.spacing(60),
-              height: theme.spacing(40),
+              width: '100px',
+              height: '100px',
               animation: `logo 2s ease infinite`,
             },
           }}
         >
           <img
             className="logo-img"
-            src={`${PUBLIC_IMAGES_URL}/logo/logo.svg`}
+            src={`${PUBLIC_IMAGES_URL}/icon_loading_black.gif`}
             alt=""
           />
         </Box>

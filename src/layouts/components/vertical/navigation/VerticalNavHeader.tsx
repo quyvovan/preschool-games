@@ -1,11 +1,10 @@
-import { Settings } from '@/context/settingsContext';
 import Box, { BoxProps } from '@mui/material/Box';
 import Typography, { TypographyProps } from '@mui/material/Typography';
 import { styled, useTheme } from '@mui/material/styles';
 import Link from 'next/link';
 import { ReactNode } from 'react';
-
-// import logo from '../../../../../public/images/logo/logo.svg';
+import { Settings } from '@/context/settingsContext';
+import logo from '../../../../../public/logo.png';
 
 interface Props {
   /* eslint-disable */
@@ -22,7 +21,7 @@ const MenuHeaderWrapper = styled(Box)<BoxProps>(({ theme }) => ({
   justifyContent: 'center',
   paddingRight: theme.spacing(4.5),
   transition: 'padding .25s ease-in-out',
-  backgroundColor: theme.palette.common.white,
+  // backgroundColor: theme.palette.common.white,
 }));
 
 const HeaderTitle = styled(Typography)<TypographyProps>(({ theme }) => ({
@@ -51,10 +50,36 @@ const VerticalNavHeader = (props: Props) => {
         userVerticalNavMenuBranding(props)
       ) : (
         <Link href="/">
-          <StyledLink>
-            {/* <img src={`${logo.src}`} alt="logo" /> */}
-            logo
-          </StyledLink>
+          <Box>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: 'bold',
+                lineHeight: 'normal',
+                textTransform: 'uppercase',
+                color: '#FF9800',
+                letterSpacing: '1px',
+                fontSize: '1.5rem',
+                textAlign: 'center',
+              }}
+            >
+              Ms. Hoang Ly
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: '400',
+                lineHeight: 'normal',
+                textTransform: 'uppercase',
+                color: '#fff',
+                letterSpacing: '1px',
+                fontSize: '.75rem !important',
+                textAlign: 'center',
+              }}
+            >
+              Preschool Teacher
+            </Typography>
+          </Box>
         </Link>
       )}
     </MenuHeaderWrapper>

@@ -140,14 +140,14 @@ const DefaultPalette = (mode: PaletteMode, themeColor: ThemeColor) => {
       primary: '#373435',
     },
     text: {
-      primary: `#6E6B7B`,
+      primary: `#fff`,
       secondary: `#B9B9C3`,
       disabled: `rgba(${mainColor}, 0.22)`,
     },
     divider: `rgba(${mainColor}, 0.12)`,
     background: {
-      paper: mode === 'light' ? '#FFF' : '#312D4B',
-      default: mode === 'light' ? '#F9FAFC' : '#28243D',
+      paper: mode === 'light' ? '#343839' : '#312D4B',
+      default: mode === 'light' ? '#343839' : '#28243D', 
     },
     action: {
       active: `rgba(${mainColor}, 0.54)`,

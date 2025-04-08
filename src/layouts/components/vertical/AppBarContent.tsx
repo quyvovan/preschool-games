@@ -1,4 +1,3 @@
-import Language from '@/components/shared-components/Language';
 import MenuIcon from '@mui/icons-material/Menu';
 import { BoxProps, Divider } from '@mui/material';
 import Box from '@mui/material/Box';
@@ -6,9 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/system';
-
-// import UserDropdown from '@/components/shared-components/UserDropdown';
-// import NotificationDropdown from '@/components/shared-components/notification/NotificationDropdown';
+import Language from '@/components/shared-components/Language';
 
 interface Props {
   hidden: boolean;
@@ -16,7 +13,6 @@ interface Props {
 }
 
 const LanguageStyled = styled(Box)<BoxProps>(({ theme }) => ({
-  marginRight: theme.spacing(4),
   '& .MuiFormLabel-root': {
     display: 'none',
   },
@@ -57,6 +53,7 @@ const AppBarContent = (props: Props) => {
 
   const hiddenSm = useMediaQuery(() => theme.breakpoints.down('sm'));
 
+  console.log('hidden', hidden);
   return (
     <Box
       sx={{
@@ -70,15 +67,13 @@ const AppBarContent = (props: Props) => {
         className="actions-left"
         sx={{ mr: 2, display: 'flex', alignItems: 'center' }}
       >
-        {hidden ? (
-          <IconButton
-            color="inherit"
-            onClick={toggleNavVisibility}
-            sx={{ ml: -2.75, ...(hiddenSm ? {} : { mr: 3.5 }) }}
-          >
-            <MenuIcon />
-          </IconButton>
-        ) : null}
+        <IconButton
+          color="inherit"
+          onClick={toggleNavVisibility}
+          sx={{ ml: -2.75, ...(hiddenSm ? {} : { mr: 3.5 }) }}
+        >
+          <MenuIcon />
+        </IconButton>
       </Box>
       <Box
         className="actions-right"
@@ -93,18 +88,12 @@ const AppBarContent = (props: Props) => {
           />
         </LanguageStyled>
 
-        <Divider
+        {/* <Divider
           sx={{ mr: 2, borderColor: theme.palette.text.secondary }}
           orientation="vertical"
           variant="middle"
           flexItem
-        />
-
-        {/* Notification  */}
-        {/* <NotificationDropdown /> */}
-
-        {/* User information */}
-        {/* <UserDropdown /> */}
+        /> */}
       </Box>
     </Box>
   );
